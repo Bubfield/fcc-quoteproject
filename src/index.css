@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  background-color: slategrey;
+  transition: background-color 1s linear 0s;
+}
+
+#quote-box {
+  background-color: white;
+  padding-top: 0.1rem;
+  padding-bottom: 2rem;
+  padding-right: 3.5rem;
+  padding-left: 3.5rem;
+  border-radius: 5px;
+}
+
+#text {
+  margin-left: 10px;
+  max-width: 420px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: slategray;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: -5px;
+  transition: color 1s linear 0s;
+}
+
+.author-container {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 450px;
+  margin-bottom: 5px;
+}
+
+#author {
+  width: 10rem;
+  text-align: end;
+  font-weight: 300;
+  color: slategrey;
+  font-family: "Roboto", sans-serif;
+  transition: color 1s linear 0s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAlt {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#tumblr-quote {
+  color: slategrey;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: color 1s linear 0s;
+}
+
+#tumblr-quote:hover {
+  opacity: 0.75;
+}
+
+#tweet-quote {
+  color: slategrey;
+  cursor: pointer;
+  transition: color 1s linear 0s;
+}
+
+#tweet-quote:hover {
+  opacity: 0.75;
+}
+
+#new-quote {
+  height: 2.3rem;
+  width: 7rem;
+  background-color: slategrey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 1s linear 0s;
+}
+
+#new-quote:hover {
+  opacity: 0.75;
+}
+
+.footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-link {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
