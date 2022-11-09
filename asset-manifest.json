@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/fcc-quoteproject/static/css/main.bd26cb8e.css",
-    "main.js": "/fcc-quoteproject/static/js/main.2181d855.js",
+    "main.js": "/fcc-quoteproject/static/js/main.1ddd236a.js",
     "index.html": "/fcc-quoteproject/index.html",
     "main.bd26cb8e.css.map": "/fcc-quoteproject/static/css/main.bd26cb8e.css.map",
-    "main.2181d855.js.map": "/fcc-quoteproject/static/js/main.2181d855.js.map"
+    "main.1ddd236a.js.map": "/fcc-quoteproject/static/js/main.1ddd236a.js.map"
   },
   "entrypoints": [
     "static/css/main.bd26cb8e.css",
-    "static/js/main.2181d855.js"
+    "static/js/main.1ddd236a.js"
   ]
 }
