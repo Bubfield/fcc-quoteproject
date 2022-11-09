@@ -6,14 +6,30 @@ import changeColors from "./changeColors";
 import changeTextAndLinks from "./changeTextAndLinks";
 import QuoteBox from "./QuoteBox";
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 function App() {
   const [quotes, setQuotes] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001").then((response) => {
-      const quotesData = response.data;
-      setQuotes(quotesData);
-    });
+    const options = {
+      method: "GET",
+      url: "https://famous-quotes4.p.rapidapi.com/random",
+      params: { category: "history", count: "50" },
+      headers: {
+        "X-RapidAPI-Key": `${API_KEY}`,
+        "X-RapidAPI-Host": "famous-quotes4.p.rapidapi.com",
+      },
+    };
+
+    axios
+      .request(options)
+      .then(function (response) {
+        setQuotes(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   }, []);
 
   const handleClick = () => {
@@ -28,8 +44,8 @@ function App() {
   return (
     <div className="main-container">
       <QuoteBox
-        quoteText={quotes[0].q}
-        quoteAuthor={quotes[0].a}
+        quoteText={quotes[0].text}
+        quoteAuthor={quotes[0].author}
         handleClick={handleClick}
       />
       <Footer />

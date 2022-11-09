@@ -10,7 +10,9 @@ const TwitterTumblr = ({ quoteText, quoteAuthor }) => {
     <div className="twitter-tumblr-container">
       <a
         id="tweet-quote"
-        href={`https://twitter.com/intent/tweet?hashtags=quotes&text=%22${quoteText}%22%20-%20${quoteAuthor}`}
+        href={`https://twitter.com/intent/tweet?text=%22${
+          quoteText && quoteText.slice(0, 200) + "[Quote too long]..."
+        }%22%20-%20${quoteAuthor}`}
         target="_blank"
         rel="noreferrer"
       >

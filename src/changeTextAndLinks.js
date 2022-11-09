@@ -12,10 +12,12 @@ const changeTextAndLinks = (quotes) => {
   author.style.animation = "fadeIn 1s";
 
   setTimeout(() => {
-    text.innerHTML = quoteLeft + quotes[quotesRandomNum].q;
-    author.innerText = "- " + quotes[quotesRandomNum].a;
-    tweetButton.href = `https://twitter.com/intent/tweet?hashtags=quotes&text=%22${quotes[quotesRandomNum].q}%22%20-%20${quotes[quotesRandomNum].a}`;
-    tumblrButton.href = `https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quotes[quotesRandomNum].a}&content=${quotes[quotesRandomNum].q}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`;
+    text.innerHTML = quoteLeft + quotes[quotesRandomNum].text;
+    author.innerText = "- " + quotes[quotesRandomNum].author;
+    tweetButton.href = `https://twitter.com/intent/tweet?text=%22${
+      quotes[quotesRandomNum].text.slice(0, 200) + "[Quote too long]..."
+    }%22%20-%20${quotes[quotesRandomNum].author}`;
+    tumblrButton.href = `https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quotes[quotesRandomNum].author}&content=${quotes[quotesRandomNum].text}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`;
   }, 500);
 
   setTimeout(() => {
